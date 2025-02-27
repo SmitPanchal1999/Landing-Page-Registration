@@ -1,0 +1,307 @@
+.m2m-landing-page {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.m2m-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    margin-left: 200px;
+    margin-right: 100px;
+}
+
+.m2m-logo {
+    height: 30px;
+    width: auto;
+}
+
+.register-button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px 0;
+}
+
+.m2m-content {
+    padding: 50px 50px;
+    max-width: 800px;
+    flex: 1;
+    margin-left: 200px;
+}
+
+.m2m-landing-page h1 {
+    font-size: 54px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.m2m-landing-page h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    max-width: 500px;
+}
+
+.body-copy {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+.project-details {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.registration-form {
+    padding: 40px 0;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.form-container {
+    padding: 30px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 0;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+}
+
+.form-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+.form-container h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: normal;
+    margin-left: 0;
+}
+
+.close-button {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+
+.form-group input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background: #00A0E3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .m2m-header {
+        padding: 15px 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .m2m-content {
+        padding: 30px 20px;
+        margin-left: 20px;
+    }
+
+    .registration-form {
+        padding: 30px 0;
+        padding-left: 0;
+    }
+
+    .m2m-landing-page h1 {
+        font-size: 36px;
+    }
+
+    .m2m-landing-page h2 {
+        font-size: 20px;
+    }
+
+    .form-container {
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+
+/* WPForms Styling */
+.wpforms-container {
+    color: white;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.wpforms-form {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.wpforms-form .wpforms-field-container {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.wpforms-form .wpforms-field {
+    padding: 0 !important;
+    margin: 0 0 20px 0 !important;
+}
+
+.wpforms-form .wpforms-submit-container {
+    text-align: right;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.wpforms-form div {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.wpforms-form button[type="submit"] {
+    width: auto !important;
+    padding: 10px 20px !important;
+    background: #00D1FF !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+}
+
+.wpforms-form button[type="submit"]::after {
+    content: '›' !important;
+    margin-left: 5px !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+}
+
+.wpforms-form button[type="submit"]:hover {
+    background: #33DAFF !important;
+}
+
+/* Update form fields to remove all padding/margin */
+.wpforms-form input[type="text"],
+.wpforms-form input[type="email"],
+.wpforms-form input[type="tel"] {
+    width: 100% !important;
+    padding: 12px !important;
+    margin: 0 !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    border-radius: 4px !important;
+    color: white !important;
+    font-size: 16px !important;
+}
+
+.wpforms-form input::placeholder {
+    color: rgba(255,255,255,0.7) !important;
+}
+
+.wpforms-form button[type="submit"] {
+    width: 100% !important;
+    padding: 15px !important;
+    background: #00A0E3 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    letter-spacing: 1px !important;
+}
+
+/* Hide form labels if you want to use placeholders instead */
+.wpforms-form .wpforms-field-label {
+    display: none !important;
+}
+
+/* Error message styling */
+.wpforms-error {
+    color: #ff6b6b !important;
+    font-size: 14px !important;
+    margin-top: 5px !important;
+}
+
+/* WPForms Validation Styling */
+.wpforms-form .wpforms-field.wpforms-has-error input {
+    border-color: #ff6b6b !important;
+}
+
+.wpforms-form .wpforms-field.wpforms-has-error label.wpforms-error {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Success Message */
+.wpforms-confirmation-container-full {
+    background: transparent !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    color: #fff !important;
+    padding: 15px !important;
+    margin-bottom: 20px;
+}
+
+/* Loading Indicator */
+.wpforms-submit-spinner {
+    margin-left: 10px;
+}
+
+/* Required Field Indicator */
+.wpforms-required-label {
+    color: #ff6b6b !important;
+}
+
+/* Field Focus State */
+.wpforms-form input:focus {
+    border-color: #00A0E3 !important;
+    outline: none !important;
+} 

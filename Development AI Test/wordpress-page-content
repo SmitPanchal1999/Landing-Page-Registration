@@ -1,0 +1,257 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .m2m-landing-page {
+        min-height: 100vh !important;
+        background-image: url('https://yoursite.com/wp-content/uploads/2024/01/bg.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        color: white !important;
+        position: relative !important;
+    }
+
+    .m2m-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .m2m-logo {
+        max-height: 50px;
+    }
+
+    .register-button {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+
+    .m2m-content {
+        padding: 100px 50px;
+        max-width: 800px;
+    }
+
+    h1 {
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .registration-form {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .form-container {
+        background: rgba(0,0,0,0.9);
+        padding: 30px;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .close-button {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: white;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fff;
+    }
+
+    .submit-button {
+        background: #00A0E3;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .submit-button:hover {
+        background: #0088c7;
+    }
+
+    .error {
+        border-color: red !important;
+    }
+
+    @media (max-width: 768px) {
+        .m2m-content {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+    }
+</style>
+
+<div class="m2m-landing-page">
+    <div class="m2m-header">
+        <img src="https://yoursite.com/wp-content/uploads/2024/01/logo.png" alt="M2M Logo" class="m2m-logo">
+        <a class="register-button">REGISTER ›</a>
+    </div>
+
+    <div class="m2m-content">
+        <h1>Life.<br>In a New Light.</h1>
+        <h2>Introducing Toronto most highly anticipated residential project.</h2>
+        <div class="body-copy">
+            <p>Each home at M2M is constructed around a column of light, and is designed to promote health, well being and exceptional living.</p>
+            <p style="margin-top: 20px;">
+                20 LUXURY TOWN HOMES<br>
+                IN BROCKTON VILLAGE<br>
+                WEST QUEEN WEST<br>
+                FROM 1.1 MILLION
+            </p>
+        </div>
+    </div>
+
+    <div class="registration-form">
+        <div class="form-container">
+            <span class="close-button">&times;</span>
+            <h3 style="color: white; margin-bottom: 20px;">Registration</h3>
+            <form id="registrationForm" onsubmit="return validateForm(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const registerButton = document.querySelector('.register-button');
+        const registrationForm = document.querySelector('.registration-form');
+        const closeButton = document.querySelector('.close-button');
+        const form = document.getElementById('registrationForm');
+
+        registerButton.addEventListener('click', function() {
+            registrationForm.style.display = 'flex';
+        });
+
+        closeButton.addEventListener('click', function() {
+            registrationForm.style.display = 'none';
+        });
+
+        registrationForm.addEventListener('click', function(e) {
+            if (e.target === registrationForm) {
+                registrationForm.style.display = 'none';
+            }
+        });
+
+        function validateForm(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            const address = document.getElementById('address');
+            
+            let isValid = true;
+            
+            // Reset errors
+            [name, email, phone, address].forEach(field => {
+                field.classList.remove('error');
+            });
+
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                email.classList.add('error');
+                isValid = false;
+            }
+
+            // Validate phone format (simple validation)
+            const phoneRegex = /^\d{10}$/;
+            if (!phoneRegex.test(phone.value.replace(/\D/g, ''))) {
+                phone.classList.add('error');
+                isValid = false;
+            }
+
+            // Check if name and address are not empty
+            if (name.value.trim() === '') {
+                name.classList.add('error');
+                isValid = false;
+            }
+            
+            if (address.value.trim() === '') {
+                address.classList.add('error');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Here you would typically send the form data to a server
+                alert('Registration successful!');
+                registrationForm.style.display = 'none';
+                form.reset();
+            }
+
+            return false;
+        }
+
+        form.addEventListener('submit', validateForm);
+    });
+</script> 

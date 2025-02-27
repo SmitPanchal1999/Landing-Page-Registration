@@ -1,0 +1,80 @@
+.m2m-landing-page {
+    min-height: 100vh;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+
+.m2m-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.m2m-logo {
+    max-height: 50px;
+}
+
+.register-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.m2m-content {
+    padding: 100px 50px;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.registration-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    z-index: 1000;
+
+}
+
+.form-container {
+    
+    background: rgba(0,0,0,0.9) !important;
+    padding: 30px !important;
+    padding-left: 0 !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    margin-left: 0 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .m2m-content {
+        padding: 50px 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+} 

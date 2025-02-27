@@ -1,0 +1,20 @@
+Instructions:
+
+1. Develop the front end code of the landing page using either the assets or the PSD file using AI.
+2. When landing on the page, the form is not visible. When you click the "Register" link the form will appear.
+3. The form will need to be written to a database (Gravity Forms)
+4. The form should have validation on the fields
+5. The page should be responsive.
+
+The website should be done using AI to build out the CMS and database within WordPress.
+AI should build out the page using Advanced Custom Fields and the following areas should be editable in WordPress:
+	1. Logo
+	2. Register (link)
+	3. Background image
+	4. Title
+	5. Sub-Title
+	6. Body Copy
+
+Registration form should be built out using Gravity Forms.
+All aspects of this test should be completed using AI.
+
